@@ -1,0 +1,23 @@
+{
+  "name": "刷題系統",
+  "short_name": "刷題",
+  "description": "Chloe's Study App",
+  "start_url": "/Chinese_L5_quiz/index.html",
+  "scope": "/Chinese_L5_quiz/",
+  "display": "standalone",
+  "background_color": "#0d0d1a",
+  "theme_color": "#0d0d1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
