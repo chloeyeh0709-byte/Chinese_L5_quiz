@@ -37,14 +37,14 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 .home-subject { font-size: 0.75rem; color: var(--text-dim); margin-top: 4px; letter-spacing: .1em; text-transform: uppercase; }
 .subject-section { margin-bottom: 32px; }
 .subject-label { font-size: 0.7rem; color: var(--text-dim); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; padding-left: 4px; }
-.section-card {
+.section-card { appearance: none; -webkit-appearance: none; width: 100%; text-align: left; font-family: var(--ui); color: var(--text); cursor: pointer; -webkit-tap-highlight-color: rgba(0,0,0,0); position: relative; z-index: 0;
   background: var(--card); border: 1px solid var(--border);
   border-radius: 14px; padding: 18px 18px 14px;
   margin-bottom: 10px; cursor: pointer;
   transition: transform .15s, border-color .2s;
   position: relative; overflow: hidden;
 }
-.section-card::after {
+.section-card::after { z-index: -1;
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(124,106,247,.08) 0%, transparent 60%);
   pointer-events: none;
@@ -226,26 +226,26 @@ html, body { height: 100%; background: var(--bg); color: var(--text); font-famil
 
   <div class="subject-section">
     <div class="subject-label">114學年度第二學期・普高國文 L5</div>
-    <div class="section-card" onclick="startSection(1)">
+    <button class="section-card" onclick="startSection(1)">
       <div class="card-top"><div class="card-name">一、單選題</div><div class="card-badge">142 題</div></div>
       <div class="pbar-wrap"><div class="pbar" id="pb1" style="width:0%"></div></div>
       <div class="card-foot" id="pt1">尚未開始</div>
-    </div>
-    <div class="section-card" onclick="startSection(2)">
+    </button>
+    <button class="section-card" onclick="startSection(2)">
       <div class="card-top"><div class="card-name">二、單選閱讀題組</div><div class="card-badge">47 小題</div></div>
       <div class="pbar-wrap"><div class="pbar" id="pb2" style="width:0%"></div></div>
       <div class="card-foot" id="pt2">尚未開始</div>
-    </div>
-    <div class="section-card" onclick="startSection(3)">
+    </button>
+    <button class="section-card" onclick="startSection(3)">
       <div class="card-top"><div class="card-name">三、多選題</div><div class="card-badge">81 題</div></div>
       <div class="pbar-wrap"><div class="pbar" id="pb3" style="width:0%"></div></div>
       <div class="card-foot" id="pt3">尚未開始</div>
-    </div>
-    <div class="section-card" onclick="startSection(4)">
+    </button>
+    <button class="section-card" onclick="startSection(4)">
       <div class="card-top"><div class="card-name">四、多選閱讀題組</div><div class="card-badge">10 小題</div></div>
       <div class="pbar-wrap"><div class="pbar" id="pb4" style="width:0%"></div></div>
       <div class="card-foot" id="pt4">尚未開始</div>
-    </div>
+    </button>
   </div>
   <button class="clear-btn" onclick="clearAll()">清除所有進度</button>
 </div>
